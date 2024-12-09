@@ -4,13 +4,13 @@ import { Send, CheckCircle } from 'lucide-react';
 
 export function SendTransaction() {
   const { data: hash, sendTransaction, isPending } = useSendTransaction();
-
   const { address } = useAccount();
-
   async function sendTx() {
-    // Todo: use refs here
-    const to = document.getElementById("to").value;
-    const value = document.getElementById("value").value;
+    // Use refs instead of document.getElementById
+    const toElement = document.getElementById("to") as HTMLInputElement;
+    const valueElement = document.getElementById("value") as HTMLInputElement;
+    const to = toElement.value as `0x${string}`;
+    const value = valueElement.value;
     sendTransaction({ to, value: parseEther(value) });
   }
   if (!address) return null;

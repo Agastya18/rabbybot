@@ -22,7 +22,7 @@ export default  function WalletConnector() {
             className="flex items-center justify-center p-4 bg-gray-700  hover:bg-gray-600 text-white rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
             <span className="mr-2 text-xl">
-              {rabbyConnector.name.toLowerCase() || <Wallet className="w-6 h-6" />}
+              { <Wallet className="w-6 h-6" />}
             </span>
             <span className="font-medium">{rabbyConnector.name}</span>
           </button>
