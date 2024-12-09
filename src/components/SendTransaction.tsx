@@ -2,6 +2,7 @@ import { useSendTransaction,useAccount } from 'wagmi';
 import { parseEther } from 'viem';
 import { Send, CheckCircle } from 'lucide-react';
 
+
 export function SendTransaction() {
   const { data: hash, sendTransaction, isPending } = useSendTransaction();
   const { address } = useAccount();
