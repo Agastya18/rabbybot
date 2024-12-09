@@ -8,17 +8,9 @@ export function SendTransaction() {
   const { address } = useAccount();
 
   async function sendTx() {
-    const toElement = document.getElementById("to") as HTMLInputElement;
-    const valueElement = document.getElementById("value") as HTMLInputElement;
-    
-    if (!toElement || !valueElement) {
-      console.error("Required input elements not found");
-      return;
-    }
-
-    const to = toElement.value;
-    const value = valueElement.value;
-    
+    // Todo: use refs here
+    const to = document.getElementById("to").value;
+    const value = document.getElementById("value").value;
     sendTransaction({ to, value: parseEther(value) });
   }
   if (!address) return null;
